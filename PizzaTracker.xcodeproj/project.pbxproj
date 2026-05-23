@@ -6,14 +6,75 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1E83450C2FC20CEE00EE96D9 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E83450B2FC20CED00EE96D9 /* WidgetKit.framework */; };
+		1E83450E2FC20CEE00EE96D9 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E83450D2FC20CEE00EE96D9 /* SwiftUI.framework */; };
+		1E83451D2FC20CF000EE96D9 /* PizzaTrackerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1E8345092FC20CED00EE96D9 /* PizzaTrackerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E83451B2FC20CF000EE96D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E8344E62FC20B8F00EE96D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E8345082FC20CED00EE96D9;
+			remoteInfo = PizzaTrackerWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1E8345222FC20CF000EE96D9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1E83451D2FC20CF000EE96D9 /* PizzaTrackerWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1E8344EE2FC20B8F00EE96D9 /* PizzaTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E8345092FC20CED00EE96D9 /* PizzaTrackerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PizzaTrackerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E83450B2FC20CED00EE96D9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		1E83450D2FC20CEE00EE96D9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1E83451E2FC20CF000EE96D9 /* Exceptions for "PizzaTrackerWidget" folder in "PizzaTrackerWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1E8345082FC20CED00EE96D9 /* PizzaTrackerWidgetExtension */;
+		};
+		1E8345242FC20DD200EE96D9 /* Exceptions for "PizzaTracker" folder in "PizzaTracker" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1E8344ED2FC20B8F00EE96D9 /* PizzaTracker */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1E8344F02FC20B8F00EE96D9 /* PizzaTracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1E8345242FC20DD200EE96D9 /* Exceptions for "PizzaTracker" folder in "PizzaTracker" target */,
+			);
 			path = PizzaTracker;
+			sourceTree = "<group>";
+		};
+		1E83450F2FC20CEE00EE96D9 /* PizzaTrackerWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1E83451E2FC20CF000EE96D9 /* Exceptions for "PizzaTrackerWidget" folder in "PizzaTrackerWidgetExtension" target */,
+			);
+			path = PizzaTrackerWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +87,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E8345062FC20CED00EE96D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E83450E2FC20CEE00EE96D9 /* SwiftUI.framework in Frameworks */,
+				1E83450C2FC20CEE00EE96D9 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				1E8344F02FC20B8F00EE96D9 /* PizzaTracker */,
+				1E83450F2FC20CEE00EE96D9 /* PizzaTrackerWidget */,
+				1E83450A2FC20CED00EE96D9 /* Frameworks */,
 				1E8344EF2FC20B8F00EE96D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +113,18 @@
 			isa = PBXGroup;
 			children = (
 				1E8344EE2FC20B8F00EE96D9 /* PizzaTracker.app */,
+				1E8345092FC20CED00EE96D9 /* PizzaTrackerWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1E83450A2FC20CED00EE96D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E83450B2FC20CED00EE96D9 /* WidgetKit.framework */,
+				1E83450D2FC20CEE00EE96D9 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +137,12 @@
 				1E8344EA2FC20B8F00EE96D9 /* Sources */,
 				1E8344EB2FC20B8F00EE96D9 /* Frameworks */,
 				1E8344EC2FC20B8F00EE96D9 /* Resources */,
+				1E8345222FC20CF000EE96D9 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1E83451C2FC20CF000EE96D9 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				1E8344F02FC20B8F00EE96D9 /* PizzaTracker */,
@@ -69,6 +153,28 @@
 			productName = PizzaTracker;
 			productReference = 1E8344EE2FC20B8F00EE96D9 /* PizzaTracker.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1E8345082FC20CED00EE96D9 /* PizzaTrackerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E83451F2FC20CF000EE96D9 /* Build configuration list for PBXNativeTarget "PizzaTrackerWidgetExtension" */;
+			buildPhases = (
+				1E8345052FC20CED00EE96D9 /* Sources */,
+				1E8345062FC20CED00EE96D9 /* Frameworks */,
+				1E8345072FC20CED00EE96D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1E83450F2FC20CEE00EE96D9 /* PizzaTrackerWidget */,
+			);
+			name = PizzaTrackerWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = PizzaTrackerWidgetExtension;
+			productReference = 1E8345092FC20CED00EE96D9 /* PizzaTrackerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +187,9 @@
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					1E8344ED2FC20B8F00EE96D9 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					1E8345082FC20CED00EE96D9 = {
 						CreatedOnToolsVersion = 26.3;
 					};
 				};
@@ -100,12 +209,20 @@
 			projectRoot = "";
 			targets = (
 				1E8344ED2FC20B8F00EE96D9 /* PizzaTracker */,
+				1E8345082FC20CED00EE96D9 /* PizzaTrackerWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1E8344EC2FC20B8F00EE96D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E8345072FC20CED00EE96D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +239,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E8345052FC20CED00EE96D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E83451C2FC20CF000EE96D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E8345082FC20CED00EE96D9 /* PizzaTrackerWidgetExtension */;
+			targetProxy = 1E83451B2FC20CF000EE96D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1E8344F72FC20B9100EE96D9 /* Debug */ = {
@@ -256,6 +388,8 @@
 				DEVELOPMENT_TEAM = TU566926VK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PizzaTracker/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,6 +422,8 @@
 				DEVELOPMENT_TEAM = TU566926VK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PizzaTracker/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,6 +439,66 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1E8345202FC20CF000EE96D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TU566926VK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PizzaTrackerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PizzaTrackerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tade.PizzaTracker.PizzaTrackerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E8345212FC20CF000EE96D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TU566926VK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PizzaTrackerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PizzaTrackerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tade.PizzaTracker.PizzaTrackerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,6 +523,15 @@
 			buildConfigurations = (
 				1E8344FA2FC20B9100EE96D9 /* Debug */,
 				1E8344FB2FC20B9100EE96D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E83451F2FC20CF000EE96D9 /* Build configuration list for PBXNativeTarget "PizzaTrackerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E8345202FC20CF000EE96D9 /* Debug */,
+				1E8345212FC20CF000EE96D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
